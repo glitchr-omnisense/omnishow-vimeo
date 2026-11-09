@@ -1,0 +1,40 @@
+{
+  "uri": "/users/101",
+  "name": "Example Studio",
+  "link": "https://vimeo.com/examplestudio",
+  "bio": "A studio written by hand for the tests.",
+  "pictures": {
+    "sizes": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "link": "https://i.vimeocdn.com/video/101-d_1920x1080",
+        "link_with_play_button": "https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F101-d_1920x1080"
+      },
+      {
+        "width": 100,
+        "height": 75,
+        "link": "https://i.vimeocdn.com/video/101-d_100x75",
+        "link_with_play_button": "https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F101-d_100x75"
+      },
+      {
+        "width": 640,
+        "height": 360,
+        "link": "https://i.vimeocdn.com/video/101-d_640x360",
+        "link_with_play_button": "https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F101-d_640x360"
+      }
+    ]
+  },
+  "created_time": "2010-01-05T09:00:00+00:00",
+  "metadata": {
+    "connections": {
+      "videos": {
+        "uri": "/users/101/videos",
+        "options": [
+          "GET"
+        ],
+        "total": 42
+      }
+    }
+  }
+}

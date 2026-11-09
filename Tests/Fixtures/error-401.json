@@ -1,0 +1,6 @@
+{
+  "error": "You must provide a valid authenticated access token.",
+  "link": null,
+  "developer_message": "You must provide a valid authenticated access token.",
+  "error_code": 8003
+}

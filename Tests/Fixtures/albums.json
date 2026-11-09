@@ -1,0 +1,97 @@
+{
+  "total": 2,
+  "page": 1,
+  "per_page": 25,
+  "paging": {
+    "next": null,
+    "previous": null,
+    "first": "/first",
+    "last": "/last"
+  },
+  "data": [
+    {
+      "uri": "/users/101/albums/5000001",
+      "name": "Showreel",
+      "description": "A showcase written by hand.",
+      "link": "https://vimeo.com/showcase/5000001",
+      "created_time": "2019-05-01T10:00:00+00:00",
+      "pictures": {
+        "sizes": [
+          {
+            "width": 1920,
+            "height": 1080,
+            "link": "https://i.vimeocdn.com/video/5000001-d_1920x1080",
+            "link_with_play_button": "https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F5000001-d_1920x1080"
+          },
+          {
+            "width": 100,
+            "height": 75,
+            "link": "https://i.vimeocdn.com/video/5000001-d_100x75",
+            "link_with_play_button": "https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F5000001-d_100x75"
+          },
+          {
+            "width": 640,
+            "height": 360,
+            "link": "https://i.vimeocdn.com/video/5000001-d_640x360",
+            "link_with_play_button": "https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F5000001-d_640x360"
+          }
+        ]
+      },
+      "metadata": {
+        "connections": {
+          "videos": {
+            "uri": "/users/101/albums/5000001/videos",
+            "total": 2
+          }
+        }
+      },
+      "user": {
+        "uri": "/users/101",
+        "name": "Example Studio",
+        "link": "https://vimeo.com/examplestudio"
+      }
+    },
+    {
+      "uri": "/users/101/albums/5000002",
+      "name": "Behind the scenes",
+      "description": "A showcase written by hand.",
+      "link": "https://vimeo.com/showcase/5000002",
+      "created_time": "2019-05-01T10:00:00+00:00",
+      "pictures": {
+        "sizes": [
+          {
+            "width": 1920,
+            "height": 1080,
+            "link": "https://i.vimeocdn.com/video/5000002-d_1920x1080",
+            "link_with_play_button": "https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F5000002-d_1920x1080"
+          },
+          {
+            "width": 100,
+            "height": 75,
+            "link": "https://i.vimeocdn.com/video/5000002-d_100x75",
+            "link_with_play_button": "https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F5000002-d_100x75"
+          },
+          {
+            "width": 640,
+            "height": 360,
+            "link": "https://i.vimeocdn.com/video/5000002-d_640x360",
+            "link_with_play_button": "https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F5000002-d_640x360"
+          }
+        ]
+      },
+      "metadata": {
+        "connections": {
+          "videos": {
+            "uri": "/users/101/albums/5000002/videos",
+            "total": 7
+          }
+        }
+      },
+      "user": {
+        "uri": "/users/101",
+        "name": "Example Studio",
+        "link": "https://vimeo.com/examplestudio"
+      }
+    }
+  ]
+}
