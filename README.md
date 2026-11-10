@@ -30,6 +30,19 @@ unauthenticated token is asked once, `POST /oauth/authorize/client`, public data
 Vimeo's live events and its type `live` need the owner's token: a live video is read as a video, its
 broadcast not described (no live contract here).
 
+## Usage policy
+
+The package declares Vimeo's usage policy as data, in [policy.json](policy.json)
+(omnisense/contracts' schema, read at its sources on 2026-11-10): rate limits per minute and per
+user, by the account's plan (25 on Free to 2,500 on Enterprise, twice that with field filtering):
+unknown to the provider, which does not know the plan; a site declares its own; charging users needs
+Vimeo's written authorisation, content stored only as the application needs it, no datasets, no AI
+training, no credit asked but no implied endorsement. Through omnishow's registry every call is held
+to it: a site's own limit (its plan's) is counted, a 429 and its `Retry-After` hold every next call
+until the wait is over (`UsageLimitReachedException`), and a site may tighten the policy in its
+configuration (`'policy' => [...]`), never loosen it. What the terms do not say is declared unknown;
+the sources and the details are in the file's `provenance`.
+
 ## Responsibility
 
 This package is an independent, unofficial client: it is not affiliated with, endorsed by or

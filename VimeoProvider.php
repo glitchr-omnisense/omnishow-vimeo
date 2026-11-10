@@ -2,6 +2,8 @@
 
 namespace Omnishow\Vimeo;
 
+use Omnisense\Contracts\Policy\DeclaresUsagePolicyInterface;
+use Omnisense\Contracts\Policy\UsagePolicy;
 use Omnishow\Capabilities;
 use Omnishow\ChannelInterface;
 use Omnishow\Exception\NotSupportedException;
@@ -32,8 +34,13 @@ use Omnishow\VideoSearchInterface;
  * read (fields=). A showcase is named "{user}/{showcase}": Vimeo reaches
  * it under its owner.
  */
-final class VimeoProvider implements ProviderInterface, VideoInterface, VideoSearchInterface, ChannelInterface, PlaylistInterface
+final class VimeoProvider implements ProviderInterface, VideoInterface, VideoSearchInterface, ChannelInterface, PlaylistInterface, DeclaresUsagePolicyInterface
 {
+    /** Vimeo's usage policy, as its terms read on the day it says (provenance.verifiedAt). */
+    public const POLICY = __DIR__.'/policy.json';
+
+    private static ?UsagePolicy $policy = null;
+
     public const ACCEPT = 'application/vnd.vimeo.*+json;version=3.4';
     private const VIDEO_FIELDS = 'uri,name,description,link,duration,created_time,release_time,pictures.sizes,player_embed_url,privacy.view,privacy.embed,stats.plays,user.uri,user.name,user.link,tags,language';
     private const USER_FIELDS = 'uri,name,link,bio,pictures.sizes,created_time,metadata.connections.videos.total';
@@ -56,6 +63,11 @@ final class VimeoProvider implements ProviderInterface, VideoInterface, VideoSea
         return 'Vimeo';
     }
 
+    public function usagePolicy(): UsagePolicy
+    {
+        return self::$policy ??= UsagePolicy::fromFile(self::POLICY);
+    }
+
     public function capabilities(): Capabilities
     {
         return new Capabilities(
@@ -66,6 +78,7 @@ final class VimeoProvider implements ProviderInterface, VideoInterface, VideoSea
             channels: true,
             playlists: true,
             platforms: [Platform::Vimeo],
+            policy: $this->usagePolicy(),
         );
     }
 

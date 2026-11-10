@@ -1,0 +1,37 @@
+{
+    "$schema": "https://github.com/glitchr-omnisense/contracts/blob/1.x/resources/usage-policy.schema.json",
+    "provider": "vimeo",
+    "rateLimits": null,
+    "rights": {
+        "commercial": "contract",
+        "openSourceRequired": null,
+        "caching": {
+            "permission": "unknown",
+            "maxTtl": null
+        },
+        "storage": "allowed",
+        "redistribution": "forbidden",
+        "attribution": {
+            "required": false,
+            "text": null,
+            "url": null,
+            "where": []
+        },
+        "licence": null
+    },
+    "requirements": {
+        "key": true,
+        "userAgent": {
+            "required": false,
+            "pattern": null
+        }
+    },
+    "provenance": {
+        "terms": "https://vimeo.com/legal/service-terms/api",
+        "policy": "https://developer.vimeo.com/guidelines/rate-limiting",
+        "verifiedAt": "2026-11-10",
+        "declaredBy": "maintainer",
+        "contact": null,
+        "notes": "Rate limits depend on the plan of the account the token belongs to, per user and per minute (developer.vimeo.com/guidelines/rate-limiting, read from its page's script): Free 25, Starter 125, Standard 250, Advanced 750, Studio 1,500, Enterprise 2,500 a minute, twice that with field filtering; legacy plans Basic 25, Plus 125, PRO 250, Business 500, Premium 750. Not declared: the provider does not know the plan (a site declares its own with the policy option); Vimeo's X-RateLimit-* headers are not read, a 429 is. Developer Addendum (2026-03-09): charging users for the application needs Vimeo's written authorisation (3.5), no ads in the player without approval (3.4), Vimeo content stored or used only as the application's legitimate operation needs it, no data mining or datasets (4.1), no AI training (4.2), everything deleted at termination (8); no credit is asked, but nothing may imply Vimeo's endorsement and the Vimeo mark is used only descriptively (3.3)."
+    }
+}

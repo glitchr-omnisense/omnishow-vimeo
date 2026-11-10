@@ -41,6 +41,6 @@ final class VimeoFactory extends ProviderFactory
             throw new InvalidConfigException('The "vimeo" provider needs: token, or client_id and client_secret.');
         }
 
-        return new VimeoProvider(new JsonClient($this->http ?? HttpClient::create(['timeout' => 20]), 'Vimeo', ['Accept' => VimeoProvider::ACCEPT]), (string) $c->string('api'), $c->string('token'), $c->string('client_id'), $c->string('client_secret'));
+        return new VimeoProvider(new JsonClient($this->http ?? HttpClient::create(['timeout' => 20]), 'Vimeo', ['Accept' => VimeoProvider::ACCEPT], $c->backoff()), (string) $c->string('api'), $c->string('token'), $c->string('client_id'), $c->string('client_secret'));
     }
 }
