@@ -30,6 +30,18 @@ unauthenticated token is asked once, `POST /oauth/authorize/client`, public data
 Vimeo's live events and its type `live` need the owner's token: a live video is read as a video, its
 broadcast not described (no live contract here).
 
+## Install
+
+```sh
+composer require omnishow/vimeo
+```
+
+It requires `omnisense/omnishow` `^1.0`, installed with it. A real call needs: **a Vimeo access
+token**, or an app's client id and secret. With no account, its tests run on recorded answers (a
+`MockHttpClient`), and
+[omnisense/omnishow](https://github.com/glitchr-omnisense/omnishow#install-and-a-first-call)'s
+README has a first call that runs without one.
+
 ## Usage policy
 
 The package declares Vimeo's usage policy as data, in [policy.json](policy.json)
